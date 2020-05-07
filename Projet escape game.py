@@ -2,10 +2,6 @@ import pygame
 from pygame.locals import *   #importer les constantes de Pygame
 pygame.init()        #initialise tous les modules
 
-#largeur_grille = 10  ## nombre de case
-#hauteur_grille = 10
-#position_grille_x = 0  ## position
-#position_grille_y = 0
 
 fenetre = pygame.display.set_mode(( 800 , 800 )) ## affichage fenêtre pygame 405 largeur/hauteur_grille * largeur/hauteur image
 
@@ -13,8 +9,7 @@ cellule = pygame.image.load("cellule800.jpg").convert()  #.convert = conversion 
 fenetre.blit(cellule, (0,0))
 
 lettre = pygame.image.load("lettre.jpg").convert()    ## image lettre
-#f = open("lettre.jpg")
-#pygame.image.load(f)
+
 fenetre.blit(lettre, (104,56))
 
 
