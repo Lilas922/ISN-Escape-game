@@ -29,3 +29,7 @@ while continuer:
                 cellule = pygame.image.load("cellule800.jpg").convert()  #.convert = conversion de l'image au format de la fenêtre
                 fenetre.blit(cellule, (0,0))
                 pygame.display.flip()
+        elif event.type == MOUSEBUTTONDOWN:
+            if event.button == 1: # 1= clique gauche
+                if robinet.collidepoint(event.pos):
+                    print ("ok robinet")
