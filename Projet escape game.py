@@ -19,7 +19,7 @@ continuer = 1
 
 f = open("lettre.jpg")
 
-robinet = pygame.Rect((417, 383), (400, 444))
+robinet = pygame.Rect((410, 383), (420, 430))
 rect_surf = pygame.Surface(robinet.size)
 
 #Boucle infinie
