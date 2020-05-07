@@ -18,6 +18,10 @@ pygame.display.flip() #afficher plusieurs images à la fois, "rafraîchir" l'éc
 continuer = 1
 
 f = open("lettre.jpg")
+
+robinet = pygame.Rect((417, 383), (400, 444))
+rect_surf = pygame.Surface(robinet.size)
+
 #Boucle infinie
 while continuer:
     for event in pygame.event.get():   #On parcours la liste de tous les événements reçus
@@ -33,3 +37,6 @@ while continuer:
             if event.button == 1: # 1= clique gauche
                 if robinet.collidepoint(event.pos):
                     print ("ok robinet")
+                    clé = pygame.image.load("clé.jpg").convert()                
+                    fenetre.blit(clé, (300,300))
+                    pygame.display.flip()
