@@ -13,6 +13,8 @@ cellule = pygame.image.load("cellule800.jpg").convert()  #.convert = conversion 
 fenetre.blit(cellule, (0,0))
 
 lettre = pygame.image.load("lettre.jpg").convert()    ## image lettre
+#f = open("lettre.jpg")
+#pygame.image.load(f)
 fenetre.blit(lettre, (104,56))
 
 
@@ -20,6 +22,7 @@ pygame.display.flip() #afficher plusieurs images à la fois, "rafraîchir" l'éc
 
 continuer = 1
 
+f = open("lettre.jpg")
 #Boucle infinie
 while continuer:
     for event in pygame.event.get():   #On parcours la liste de tous les événements reçus
@@ -27,5 +30,7 @@ while continuer:
             continuer = 0      #On arrête la boucle
         if event.type == KEYDOWN:
             if event.key == K_SPACE:
-                
-                
+                print ("ok")
+                cellule = pygame.image.load("cellule800.jpg").convert()  #.convert = conversion de l'image au format de la fenêtre
+                fenetre.blit(cellule, (0,0))
+                pygame.display.flip()
