@@ -59,3 +59,4 @@ while continuer:
 
 # Il y aurait des petits trucs à modifier sur la lettre :
 # - Il faudrait mettre que pour enlever des images qui apparaissent sur la fenêtre, il faut appuyer sur la touche espace
+# - J'ai fait esayer le programme à ma soeur et elle a eu du mal à lire le contenu de la lettre, il faudrait peut-être changer la police de l'écriture. 
