@@ -50,7 +50,12 @@ while continuer:
                     clé = pygame.image.load("clé.jpg").convert()                
                     fenetre.blit(clé, (300,300))
                     pygame.display.flip()
-
+                    if event.type == KEYDOWN:
+                        if event.key == K_SPACE:
+                            print ("ok")
+                            cellule = pygame.image.load("cellule800.jpg").convert()  #.convert = conversion de l'image au format de la fenêtre
+                            fenetre.blit(cellule, (0,0))
+                            pygame.display.flip()
 
 # Il y aurait des petits trucs à modifier sur la lettre :
 # - Il faudrait mettre que pour enlever des images qui apparaissent sur la fenêtre, il faut appuyer sur la touche espace
