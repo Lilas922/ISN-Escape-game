@@ -8,6 +8,16 @@ fenetre = pygame.display.set_mode(( 800 , 800 )) ## affichage fenêtre pygame 40
 cellule = pygame.image.load("cellule800.jpg").convert()  #.convert = conversion de l'image au format de la fenêtre
 fenetre.blit(cellule, (0,0))
 
+import pygame
+from pygame.locals import *   #importer les constantes de Pygame
+pygame.init()        #initialise tous les modules
+
+
+fenetre = pygame.display.set_mode(( 800 , 800 )) ## affichage fenêtre pygame 405 largeur/hauteur_grille * largeur/hauteur image
+
+cellule = pygame.image.load("cellule800.jpg").convert()  #.convert = conversion de l'image au format de la fenêtre
+fenetre.blit(cellule, (0,0))
+
 lettre = pygame.image.load("lettre.jpg").convert()    ## image lettre
 
 fenetre.blit(lettre, (104,56))
@@ -19,7 +29,7 @@ continuer = 1
 
 f = open("lettre.jpg")
 
-robinet = pygame.Rect((375, 355), (410, 395))
+robinet = pygame.Rect((375, 355), (35, 40)) #première parenthèse pour le coin en haut à gauche de la zone de clic et deuxième parenthèse pour la taille de rectangle
 rect_surf = pygame.Surface(robinet.size)
 
 #Boucle infinie
@@ -40,3 +50,7 @@ while continuer:
                     clé = pygame.image.load("clé.jpg").convert()                
                     fenetre.blit(clé, (300,300))
                     pygame.display.flip()
+
+
+# Il y aurait des petits trucs à modifier sur la lettre :
+# - Il faudrait mettre que pour enlever des images qui apparaissent sur la fenêtre, il faut appuyer sur la touche espace
