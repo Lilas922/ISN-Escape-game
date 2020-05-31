@@ -10,7 +10,7 @@ cellule = pygame.image.load("cellule800.jpg").convert()  #.convert = conversion 
 
 fenetre.blit(cellule, (0,0))
 
-lettre = pygame.image.load("lettre.png").convert()    ## image lettre
+lettre = pygame.image.load("lettre.jpg").convert()    ## image lettre
 
 fenetre.blit(lettre, (104,56))
 
@@ -18,25 +18,26 @@ pygame.display.flip() #afficher plusieurs images à la fois, "rafraîchir" l'éc
 
 continuer = 1
 
-f = open("lettre.png")
+f = open("lettre.jpg")
 
 robinet = pygame.Rect((375, 355), (35, 40))
 rect_surf = pygame.Surface(robinet.size)
 
-tiroire1 = pygame.Rect((256, 457), (65, 40))
-rect_surf = pygame.Surface(tiroire1.size)
+tiroir1 = pygame.Rect((256, 457), (65, 40))
+rect_surf = pygame.Surface(tiroir1.size)
 
-tiroire2 = pygame.Rect((256, 497), (65, 40))
-rect_surf = pygame.Surface(tiroire2.size)
+tiroir2 = pygame.Rect((256, 497), (65, 40))
+rect_surf = pygame.Surface(tiroir2.size)
 
-tiroire3 = pygame.Rect((256,527), (65, 40))
-rect_surf = pygame.Surface(tiroire3.size)
+tiroir3 = pygame.Rect((256,527), (65, 40))
+rect_surf = pygame.Surface(tiroir3.size)
 
- tiroire4 = pygame.Rect((256,557), (65, 40))
-rect_surf = pygame.Surface(tiroire4.size)
+tiroir4 = pygame.Rect((256,557), (65, 40))
+rect_surf = pygame.Surface(tiroir4.size)
 
-#tiroireG = pygame.Rect((140, 472), (115, 45))
-#rect_surf = pygame.Suface(tiroireG.size)
+tiroirG = pygame.Rect((136, 460), (117, 56))
+rect_surf = pygame.Surface(tiroirG.size)
+
 
 #Boucle infinie
 
@@ -80,7 +81,7 @@ while continuer:
 
                         if event.button == 1: # 1= clique gauche
                 
-                            m1 = pygame.image.load("m1.png").convert()
+                            m1 = pygame.image.load("m1.jpg").convert()
 
                             fenetre.blit(m1, (300,190))
 
@@ -97,15 +98,47 @@ while continuer:
                                     fenetre.blit(cellule, (0,0))
                                 
                                     pygame.display.flip()
+                                    
+                                    if tiroirG.collidepoint(event.pos) :
+                                                                            
+                                        print ("ok tiroirG")
+                                                                            
+                                        tiroir = pygame.image.load("tiroir.jpg").convert()
+                                                                            
+                                        fenetre.blit(tiroir, (250, 250))
+                                                                            
+                                        pygame.display.flip()
+                    
+                                        if event.type == MOUSEBUTTONDOWN:
+
+                                            if event.button == 1: # 1= clique gauche
+                
+                                                m2 = pygame.image.load("enigme.jpg").convert()
+
+                                                fenetre.blit(m2, (200,150))
+
+                                                pygame.display.flip()
+                                                                            
+                                                if event.type == KEYDOWN:
+
+                                                    if event.key == K_SPACE:
+
+                                                        print ("ok")
+
+                                                        cellule = pygame.image.load("cellule800.jpg").convert()  #.convert = conversion de l'image au format de la fenêtre
+
+                                                        fenetre.blit(cellule, (0,0))
+                                                                                        
+                                                        pygame.display.flip()
                                 
                                          
-                if tiroire1.collidepoint(event.pos) :
+                if tiroir1.collidepoint(event.pos) :
                                                                             
-                    print ("ok tiroire1")
+                    print ("ok tiroir1")
                                                                             
-                    tiroire = pygame.image.load("tiroire.jpg").convert()
+                    tiroir = pygame.image.load("tiroir.jpg").convert()
                                                                             
-                    fenetre.blit(tiroire, (250, 250))
+                    fenetre.blit(tiroir, (250, 250))
                                                                             
                     pygame.display.flip()
                     
@@ -113,7 +146,7 @@ while continuer:
 
                         if event.button == 1: # 1= clique gauche
                 
-                            m2 = pygame.image.load("m2.png").convert()
+                            m2 = pygame.image.load("m2.jpg").convert()
 
                             fenetre.blit(m2, (200,150))
 
@@ -132,13 +165,13 @@ while continuer:
                             pygame.display.flip()
                             
                 
-                if tiroire2.collidepoint(event.pos) :
+                if tiroir2.collidepoint(event.pos) :
                                                                             
-                    print ("ok tiroire2")
+                    print ("ok tiroir2")
                                                                             
-                    tiroire = pygame.image.load("tiroire.jpg").convert()
+                    tiroir = pygame.image.load("tiroir.jpg").convert()
                                                                             
-                    fenetre.blit(tiroire, (300, 300))
+                    fenetre.blit(tiroir, (300, 300))
                                                                             
                     pygame.display.flip()
                     
@@ -146,7 +179,7 @@ while continuer:
 
                         if event.button == 1: # 1= clique gauche
                 
-                            m2 = pygame.image.load("m2.png").convert()
+                            m2 = pygame.image.load("m2.jpg").convert()
 
                             fenetre.blit(m2, (250,200))
 
@@ -165,13 +198,13 @@ while continuer:
                             pygame.display.flip()
                             
                 
-                if tiroire3.collidepoint(event.pos) :
+                if tiroir3.collidepoint(event.pos) :
                                                                             
-                    print ("ok tiroire3")
+                    print ("ok tiroir3")
                                                                             
-                    tiroire = pygame.image.load("tiroire.jpg").convert()
+                    tiroir = pygame.image.load("tiroir.jpg").convert()
                                                                             
-                    fenetre.blit(tiroire, (350, 350))
+                    fenetre.blit(tiroir, (350, 350))
                                                                             
                     pygame.display.flip()
                     
@@ -179,7 +212,7 @@ while continuer:
 
                         if event.button == 1: # 1= clique gauche
                 
-                            m2 = pygame.image.load("m2.png").convert()
+                            m2 = pygame.image.load("m2.jpg").convert()
 
                             fenetre.blit(m2, (300,250))
 
@@ -198,13 +231,13 @@ while continuer:
                             pygame.display.flip()
                             
                 
-                if tiroire4.collidepoint(event.pos) :
+                if tiroir4.collidepoint(event.pos) :
                                                                             
-                    print ("ok tiroire4")
+                    print ("ok tiroir4")
                                                                             
-                    tiroire = pygame.image.load("tiroire.jpg").convert()
+                    tiroir = pygame.image.load("tiroir.jpg").convert()
                                                                             
-                    fenetre.blit(tiroire, (400, 400))
+                    fenetre.blit(tiroir, (400, 400))
                                                                             
                     pygame.display.flip()
                     
@@ -212,7 +245,7 @@ while continuer:
 
                         if event.button == 1: # 1= clique gauche
                 
-                            m2 = pygame.image.load("m2.png").convert()
+                            m2 = pygame.image.load("m2.jpg").convert()
 
                             fenetre.blit(m2, (350,300))
 
@@ -230,5 +263,3 @@ while continuer:
                                                                                         
                             pygame.display.flip()
 
-                            
-#J'ai avancé un peu mais la je dois m'arreter j'ai des trucs a faire je reviens...                          
