@@ -99,37 +99,37 @@ while continuer:
                                 
                                     pygame.display.flip()
                                     
-                                    if tiroirG.collidepoint(event.pos) :
+                if tiroirG.collidepoint(event.pos) :
                                                                             
-                                        print ("ok tiroirG")
+                    print ("ok tiroirG")
                                                                             
-                                        tiroir = pygame.image.load("tiroir.jpg").convert()
+                    tiroir = pygame.image.load("tiroir.jpg").convert()
                                                                             
-                                        fenetre.blit(tiroir, (250, 250))
+                    fenetre.blit(tiroir, (250, 250))
                                                                             
-                                        pygame.display.flip()
+                    pygame.display.flip()
                     
-                if event.type == MOUSEBUTTONDOWN:
+                    if event.type == MOUSEBUTTONDOWN:
 
-                    if event.button == 1: # 1= clique gauche
+                        if event.button == 1: # 1= clique gauche
                 
-                        enigme = pygame.image.load("enigme.jpg").convert()
+                            enigme = pygame.image.load("enigme.jpg").convert()
 
-                        fenetre.blit(enigme, (200,150))
+                            fenetre.blit(enigme, (200,150))
 
-                        pygame.display.flip()
+                            pygame.display.flip()
                                                                             
-                        if event.type == KEYDOWN:
+                            if event.type == KEYDOWN:
 
-                            if event.key == K_SPACE:
+                                if event.key == K_SPACE:
 
-                                print ("ok")
+                                    print ("ok")
 
-                                cellule = pygame.image.load("cellule800.jpg").convert()  #.convert = conversion de l'image au format de la fenêtre
+                                    cellule = pygame.image.load("cellule800.jpg").convert()  #.convert = conversion de l'image au format de la fenêtre
 
-                                fenetre.blit(cellule, (0,0))
-                                                                                        
-                                pygame.display.flip()
+                                    fenetre.blit(cellule, (0,0))
+
+                                    pygame.display.flip()
                                 
                                          
                 if tiroir1.collidepoint(event.pos) :
