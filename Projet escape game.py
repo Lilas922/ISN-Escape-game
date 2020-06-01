@@ -109,27 +109,27 @@ while continuer:
                                                                             
                                         pygame.display.flip()
                     
-                                        if event.type == MOUSEBUTTONDOWN:
+                if event.type == MOUSEBUTTONDOWN:
 
-                                            if event.button == 1: # 1= clique gauche
+                    if event.button == 1: # 1= clique gauche
                 
-                                                m2 = pygame.image.load("enigme.jpg").convert()
+                        enigme = pygame.image.load("enigme.jpg").convert()
 
-                                                fenetre.blit(m2, (200,150))
+                        fenetre.blit(enigme, (200,150))
 
-                                                pygame.display.flip()
+                        pygame.display.flip()
                                                                             
-                                                if event.type == KEYDOWN:
+                        if event.type == KEYDOWN:
 
-                                                    if event.key == K_SPACE:
+                            if event.key == K_SPACE:
 
-                                                        print ("ok")
+                                print ("ok")
 
-                                                        cellule = pygame.image.load("cellule800.jpg").convert()  #.convert = conversion de l'image au format de la fenêtre
+                                cellule = pygame.image.load("cellule800.jpg").convert()  #.convert = conversion de l'image au format de la fenêtre
 
-                                                        fenetre.blit(cellule, (0,0))
+                                fenetre.blit(cellule, (0,0))
                                                                                         
-                                                        pygame.display.flip()
+                                pygame.display.flip()
                                 
                                          
                 if tiroir1.collidepoint(event.pos) :
