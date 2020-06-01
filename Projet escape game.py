@@ -38,6 +38,19 @@ rect_surf = pygame.Surface(tiroir4.size)
 tiroirG = pygame.Rect((136, 460), (117, 56))
 rect_surf = pygame.Surface(tiroirG.size)
 
+def espacecellule():
+    
+    if event.type == KEYDOWN:
+
+        if event.key == K_SPACE:
+
+            print ("ok")
+
+            cellule = pygame.image.load("cellule800.jpg").convert()  #.convert = conversion de l'image au format de la fenêtre
+
+            fenetre.blit(cellule, (0,0))
+                                                                                        
+            pygame.display.flip()
 
 #Boucle infinie
 
@@ -87,17 +100,7 @@ while continuer:
 
                             pygame.display.flip()
                             
-                            if event.type == KEYDOWN:
-
-                                if event.key == K_SPACE:
-
-                                    print ("ok")
-
-                                    cellule = pygame.image.load("cellule800.jpg").convert()  #.convert = conversion de l'image au format de la fenêtre
-
-                                    fenetre.blit(cellule, (0,0))
-                                
-                                    pygame.display.flip()
+                            espacecellule()
                                     
                 if tiroirG.collidepoint(event.pos) :
                                                                             
@@ -119,17 +122,7 @@ while continuer:
 
                             pygame.display.flip()
                                                                             
-                            if event.type == KEYDOWN:
-
-                                if event.key == K_SPACE:
-
-                                    print ("ok")
-
-                                    cellule = pygame.image.load("cellule800.jpg").convert()  #.convert = conversion de l'image au format de la fenêtre
-
-                                    fenetre.blit(cellule, (0,0))
-
-                                    pygame.display.flip()
+                            espacecellule()
                                 
                                          
                 if tiroir1.collidepoint(event.pos) :
@@ -152,17 +145,7 @@ while continuer:
 
                             pygame.display.flip()
                                                                             
-                    if event.type == KEYDOWN:
-
-                        if event.key == K_SPACE:
-
-                            print ("ok")
-
-                            cellule = pygame.image.load("cellule800.jpg").convert()  #.convert = conversion de l'image au format de la fenêtre
-
-                            fenetre.blit(cellule, (0,0))
-                                                                                        
-                            pygame.display.flip()
+                            espacecellule()
                             
                 
                 if tiroir2.collidepoint(event.pos) :
@@ -185,17 +168,7 @@ while continuer:
 
                             pygame.display.flip()
                                                                             
-                    if event.type == KEYDOWN:
-
-                        if event.key == K_SPACE:
-
-                            print ("ok")
-
-                            cellule = pygame.image.load("cellule800.jpg").convert()  #.convert = conversion de l'image au format de la fenêtre
-
-                            fenetre.blit(cellule, (0,0))
-                                                                                        
-                            pygame.display.flip()
+                            espacecellule()
                             
                 
                 if tiroir3.collidepoint(event.pos) :
@@ -218,17 +191,7 @@ while continuer:
 
                             pygame.display.flip()
                                                                             
-                    if event.type == KEYDOWN:
-
-                        if event.key == K_SPACE:
-
-                            print ("ok")
-
-                            cellule = pygame.image.load("cellule800.jpg").convert()  #.convert = conversion de l'image au format de la fenêtre
-
-                            fenetre.blit(cellule, (0,0))
-                                                                                        
-                            pygame.display.flip()
+                            espacecellule()
                             
                 
                 if tiroir4.collidepoint(event.pos) :
@@ -251,15 +214,4 @@ while continuer:
 
                             pygame.display.flip()
                                                                             
-                    if event.type == KEYDOWN:
-
-                        if event.key == K_SPACE:
-
-                            print ("ok")
-
-                            cellule = pygame.image.load("cellule800.jpg").convert()  #.convert = conversion de l'image au format de la fenêtre
-
-                            fenetre.blit(cellule, (0,0))
-                                                                                        
-                            pygame.display.flip()
-
+                            espacecellule()
